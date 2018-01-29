@@ -1,3 +1,8 @@
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
 var twoSum = function(nums, target) {
   map = {};
   for (idx in nums) {
@@ -8,7 +13,3 @@ var twoSum = function(nums, target) {
     }
   }
 };
-
-result = twoSum([3, 2, 4], 6);
-
-console.log(result);
