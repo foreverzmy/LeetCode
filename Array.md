@@ -19,3 +19,4 @@ easy -> hard
 * [169、Majority Element](./169%20Majority%20Element)
 * [217、Contains Duplicate](./217%20Contains%20Duplicate)
 * [219、Contains Duplicate II](./219%20Contains%20Duplicate%20II)
+* [243、Shortest Word Distance](./243%20Shortest%20Word%20Distance)
