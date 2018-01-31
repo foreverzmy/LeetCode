@@ -17,3 +17,4 @@ easy -> hard
 * [122、Best Time to Buy and Sell Stock II](./122%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II)
 * [167、Two Sum II - Input array is sorted](./167%20Two%20Sum%20II%20-%20Input%20array%20is%20sorted)
 * [169、Majority Element](./169%20Majority%20Element)
+* [217、Contains Duplicate](./217%20Contains%20Duplicate)
