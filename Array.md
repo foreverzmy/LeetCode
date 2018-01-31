@@ -2,6 +2,8 @@
 
 easy -> hard
 
+### Easy
+
 * [Two Sum](./001%20Two%20Sum)
 * [Remove Duplicates from Sorted Array](./026%20Remove%20Duplicates%20from%20Sorted%20Array)
 * [Remove Element](./027%20Remove%20Element)
