@@ -18,3 +18,4 @@ easy -> hard
 * [167、Two Sum II - Input array is sorted](./167%20Two%20Sum%20II%20-%20Input%20array%20is%20sorted)
 * [169、Majority Element](./169%20Majority%20Element)
 * [217、Contains Duplicate](./217%20Contains%20Duplicate)
+* [219、Contains Duplicate II](./219%20Contains%20Duplicate%20II)
