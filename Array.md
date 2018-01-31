@@ -2,7 +2,8 @@
 
 easy -> hard
 
-* [Two Sum](./001 Two Sum)
+[Two Sum](./001 Two Sum)
+
 * [Remove Duplicates from Sorted Array](./026 Remove Duplicates from Sorted Array)
 * [Remove Element](./027 Remove Element)
 * [Search Insert Position](./035 Search Insert Position)
