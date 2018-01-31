@@ -2,12 +2,12 @@
 
 easy -> hard
 
-* [Two Sum](./001-Two-Sum)
+* [Two Sum](./001-TwoSum)
 * [Remove Duplicates from Sorted Array](./026 Remove Duplicates from Sorted Array)
 * [Remove Element](./027 Remove Element)
 * [Search Insert Position](./035 Search Insert Position)
 * [Maximum Subarray](./053 Maximum Subarray)
-* [Plus One](./066 Plus One)
+* [Plus One](./066%20Plus%20One)
 * [Merge Sorted Array](./088 Merge Sorted Array)
 * [Pascal's Triangle](./118 Pascal's Triangle)
 * [Pascal's Triangle II](./119 Pascal's Triangle II)
