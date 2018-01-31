@@ -5,7 +5,7 @@
  */
 var twoSum = function(nums, target) {
   map = {};
-  for (idx in nums) {
+  for (let idx in nums) {
     if (!dict[target - nums[idx]]) {
       dict[nums[idx]] = idx;
     } else {
