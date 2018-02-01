@@ -5,7 +5,7 @@
  */
 var shortestDistance = function(words, word1, word2) {
   let dict = {};
-  let distance = Infinity;
+  let distance = words.length;
   for (let i in words) {
     const tmp = words[i];
     if (tmp === word1) {
