@@ -2,7 +2,7 @@
  * @param {number[]} digits
  * @return {number[]}
  */
-var plusOne = function (digits) {
+var plusOne = function(digits) {
   length = digits.length;
   digits[length - 1] += 1;
   for (var i = length - 1; i >= 0; i--) {
@@ -19,5 +19,3 @@ var plusOne = function (digits) {
   }
   return digits;
 };
-
-plusOne([9])

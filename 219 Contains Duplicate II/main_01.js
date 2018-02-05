@@ -3,7 +3,7 @@
  * @param {number} k
  * @return {boolean}
  */
-var containsNearbyDuplicate = function (nums, k) {
+var containsNearbyDuplicate = function(nums, k) {
   let dict = {};
   const length = nums.length;
   for (let i = 0; i < length; i++) {
@@ -20,6 +20,3 @@ var containsNearbyDuplicate = function (nums, k) {
   }
   return false;
 };
-
-result = containsNearbyDuplicate([-1, -1], 1)
-console.log(result)

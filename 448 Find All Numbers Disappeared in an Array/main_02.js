@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-var findDisappearedNumbers = function (nums) {
+var findDisappearedNumbers = function(nums) {
   let result = [];
   const n = nums.length;
   for (let i = 0; i < n; i++) {
@@ -20,6 +20,4 @@ var findDisappearedNumbers = function (nums) {
     }
   }
   return result;
-}
-
-findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1])
+};

@@ -19,8 +19,3 @@ var merge = function(nums1, m, nums2, n) {
     nums1.splice(0, n, ...nums2.slice(0, n));
   }
 };
-
-nums1 = [4, 0, 0, 0, 0, 0];
-
-merge(nums1, 1, [1, 2, 3, 5, 6], 5);
-console.log(nums1);

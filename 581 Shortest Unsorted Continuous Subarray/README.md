@@ -25,10 +25,22 @@ Output: 5
 Explanation: You need to sort [6, 4, 8, 10, 9] in ascending order to make the whole array sorted in ascending order.
 ```
 
-## Answer
+## Answer 1
+
+### 思路
+
+可以直接将数组拷贝然后对其进行排序，然后用排序后的数组与之前的数组进行对比，找到第一个和最后一个不一致的位置，相减 +1 得到结果。要对顺序数组做另外的处理。
+
+我用了快速排序对数组进行排序，速度还可以，但是利用了多余的空间，leetcode 报错：Memory Limit Exceeded，只能用下面的方法了。
+
+### 代码
+
+[JS](./main_01.js)
+
+## Answer 2
 
 ### 思路
 
 ### 代码
 
-[JS]()
+[JS](./main_02.js)

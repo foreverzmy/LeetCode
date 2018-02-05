@@ -3,7 +3,7 @@
  * @param {number} k
  * @return {number}
  */
-var findPairs = function (nums, k) {
+var findPairs = function(nums, k) {
   let dict = {};
   let count = 0;
   for (let i = 0; i < nums.length; i++) {
@@ -16,7 +16,7 @@ var findPairs = function (nums, k) {
   }
 
   for (let key in dict) {
-    if (k === 0 & dict[key] > 1) {
+    if ((k === 0) & (dict[key] > 1)) {
       count++;
     }
     if (k > 0 && dict[~~key + k]) {
@@ -26,5 +26,3 @@ var findPairs = function (nums, k) {
 
   return count;
 };
-
-console.log(findPairs([1, 1, 3, 3, 1], 2))

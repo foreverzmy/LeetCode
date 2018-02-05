@@ -4,7 +4,7 @@
  * @param {number} c
  * @return {number[][]}
  */
-var matrixReshape = function (nums, r, c) {
+var matrixReshape = function(nums, r, c) {
   const m = nums.length;
   const n = nums[0].length;
   const matrix = [];
@@ -21,10 +21,3 @@ var matrixReshape = function (nums, r, c) {
   }
   return matrix;
 };
-
-rs = matrixReshape([
-  [1, 2],
-  [3, 4]
-], 1, 4)
-
-console.log(rs)

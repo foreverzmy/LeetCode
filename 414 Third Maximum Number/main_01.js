@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var thirdMax = function (nums) {
+var thirdMax = function(nums) {
   let max = -Infinity;
   let snd = -Infinity;
   let thd = -Infinity;
@@ -17,11 +17,9 @@ var thirdMax = function (nums) {
     } else if (val > thd && val < snd) {
       thd = val;
     }
-  })
+  });
   if (thd === -Infinity) {
     return max;
   }
   return thd;
 };
-
-console.log(thirdMax([2, 2, 3, 1]))

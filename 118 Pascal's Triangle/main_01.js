@@ -24,5 +24,3 @@ var generate = function(numRows) {
   }
   return pascal;
 };
-
-generate(5);

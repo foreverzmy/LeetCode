@@ -13,5 +13,3 @@ var removeElement = function(nums, val) {
     }
   }
 };
-
-removeElement([3, 3], 3);
