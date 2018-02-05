@@ -31,7 +31,7 @@
 * [605、Can Place Flowers](./605%20Can%20Place%20Flowers)
 * [624、Maximum Distance in Arrays](./624%20Maximum%20Distance%20in%20Arrays)
 * [628、Maximum Product of Three Numbers](./628%20Maximum%20Product%20of%20Three%20Numbers)
-* [643、Maximum Average Subarray I]()
+* [643、Maximum Average Subarray I](./643%20Maximum%20Average%20Subarray%20I)
 * [661、Image Smoother]()
 * [665、Non-decreasing Array]()
 * [674、Longest Continuous Increasing Subsequence]()
