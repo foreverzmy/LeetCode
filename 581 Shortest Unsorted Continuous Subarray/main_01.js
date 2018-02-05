@@ -21,20 +21,20 @@ var findUnsortedSubarray = function(nums) {
   };
 
   const sortNums = qucikSort([...nums]);
-  let start = -1;
-  let end = -1;
+  let start = null;
+  let end = null;
   for (let i = 0; i < nums.length; i++) {
-    if (start === -1 && sortNums[i] !== nums[i]) {
+    if (start === null && sortNums[i] !== nums[i]) {
       start = i;
     }
     if (
-      end === -1 &&
+      end === null &&
       sortNums[nums.length - 1 - i] !== nums[nums.length - 1 - i]
     ) {
       end = nums.length - 1 - i;
     }
   }
-  if (start === -1 && end === -1) {
+  if (start === null && end === null) {
     return 0;
   }
   return end - start + 1;

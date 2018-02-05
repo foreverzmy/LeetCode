@@ -41,6 +41,8 @@ Explanation: You need to sort [6, 4, 8, 10, 9] in ascending order to make the wh
 
 ### 思路
 
+将最大值 max 初始化为数组的第一个值，最小值 min 初始化为数组的最后一个值，然后分别从数组的第二个值和倒数第二个值遍历，如果 max 大于 nums[i]，就把 i 赋给 end。如果 min 小于 nums[length-i-1]，就把 length-i-1 赋给 start。这样正反遍历一遍，start 和 end 分别指向无须的子数组中最大值和最小值应该在的位置，也就是子数组的开始和结尾在原数组中的坐标。使用 end-start+1 即是子数组的长度。
+
 ### 代码
 
 [JS](./main_02.js)
