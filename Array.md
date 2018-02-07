@@ -34,7 +34,7 @@
 * [643、Maximum Average Subarray I](./643%20Maximum%20Average%20Subarray%20I)
 * [661、Image Smoother](./661%20Image%20Smoother)
 * [665、Non-decreasing Array](./665%20Non-decreasing%20Array)
-* [674、Longest Continuous Increasing Subsequence]()
+* [674、Longest Continuous Increasing Subsequence](./674%20Longest%20Continuous%20Increasing%20Subsequence)
 * [695、Max Area of Island]()
 * [697、Degree of an Array]()
 * [717、1-bit and 2-bit Characters]()
