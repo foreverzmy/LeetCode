@@ -17,7 +17,3 @@ var isOneBitCharacter = function (bits) {
   }
   return false;
 };
-
-rs = isOneBitCharacter([0, 1, 1, 0, 1, 0])
-
-console.log(rs)
