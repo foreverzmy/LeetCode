@@ -1,5 +1,7 @@
 # Longest Substring Without Repeating Characters
 
+> 收录在LeetCode字节跳动题库中
+
 ## Question
 
 ### leetcode
