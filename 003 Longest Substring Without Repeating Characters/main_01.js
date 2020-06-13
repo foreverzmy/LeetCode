@@ -8,11 +8,13 @@ function lengthOfLongestSubstring(s) {
   const uniqueChar = new Set();
   const size = s.length;
 
-  let searchingPointer = 0; // 设置右边指针的初始值，在整个过程中，字符串只遍历一遍
+  let rightIndex = 0; // 设置右边指针的初始值，在整个过程中，字符串只遍历一遍
   let ans = 0;
-  for (let startPointer = 0; startPointer < size; startPointer += 1) {
-    if (startPointer !== 0) {
-      uniqueChar.delete(s.charAt(startPointer - 1)); // 如果左指针向后移动，就将之前开头的字符串删除
+  for (let leftIndex = 0; leftIndex < size; leftIndex += 1) {
+    // 提前返回
+    if (leftIndex + ans > size) return ans;
+    if (leftIndex !== 0) {
+      uniqueChar.delete(s.charAt(leftIndex - 1)); // 如果左指针向后移动，就将之前开头的字符串删除
       /**
        * Eg: abadeeff
        * 0:
@@ -24,14 +26,14 @@ function lengthOfLongestSubstring(s) {
     }
 
     while (
-      searchingPointer < size &&
-      !uniqueChar.has(s.charAt(searchingPointer))
+      rightIndex < size &&
+      !uniqueChar.has(s.charAt(rightIndex))
     ) {
-      uniqueChar.add(s.charAt(searchingPointer));
-      searchingPointer += 1;
+      uniqueChar.add(s.charAt(rightIndex));
+      rightIndex += 1;
     }
 
-    ans = Math.max(ans, searchingPointer - startPointer);
+    ans = Math.max(ans, rightIndex - leftIndex);
   }
 
   return ans;
