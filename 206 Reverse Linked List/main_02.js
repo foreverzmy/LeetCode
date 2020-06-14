@@ -16,18 +16,13 @@
  * @return {ListNode}
  */
 var reverseList = function(head) {
-  if (head === null) return head;
-
-  /** @type {ListNode} */
-  let reversedList = null;
-  let currentList = head;
-
-  while (currentList !== null) {
-    const temp = currentList.next;
-    currentList.next = reversedList;
-    reversedList = currentList;
-    currentList = temp;
+  if (head.next === null) {
+    return head;
   }
 
-  return reversedList;
+  // 如果没有到结尾
+  const newList = reverseList(head.next);
+  head.next.next = head;
+  head.next = null;
+  return newList;
 };
