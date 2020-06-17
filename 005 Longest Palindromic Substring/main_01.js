@@ -1,60 +1,54 @@
-/*
- * @lc app=leetcode id=5 lang=javascript
- *
- * [5] Longest Palindromic Substring
- */
 /**
  * @param {string} s
  * @return {string}
  */
-var longestPalindrome = function(s) {
-  // babad
-  // tag : dp
-  if (!s || s.length === 0) return "";
-  let res = s[0];
+const longestPalindrome = function (s) {
+  const size = s.length;
+  if (size <= 1) return s;
+  else if (size === 2) return s[0] === s[1] ? s : s[0];
 
-  const dp = [];
-
-  // 倒着遍历简化操作， 这么做的原因是dp[i][..]依赖于dp[i + 1][..]
-  for (let i = s.length - 1; i >= 0; i--) {
-    dp[i] = [];
-    for (let j = i; j < s.length; j++) {
-      if (j - i === 0) dp[i][j] = true;
-      // specail case 1
-      else if (j - i === 1 && s[i] === s[j]) dp[i][j] = true;
-      // specail case 2
-      else if (s[i] === s[j] && dp[i + 1][j - 1]) {
-        // state transition
-        dp[i][j] = true;
-      }
-
-      if (dp[i][j] && j - i + 1 > res.length) {
-        // update res
-        res = s.slice(i, j + 1);
+  let start = 0;
+  let end = 0;
+  for (let middle = 0; middle < size - 1; middle += 1) {
+    const odd = appendAroundMiddlePointer(s, middle, middle);
+    const even = appendAroundMiddlePointer(s, middle, middle + 1);
+    const len = Math.max(odd, even);
+    if (len > end - start) {
+      let halfSize = 0;
+      if (len === odd) {
+        // 奇数
+        start = middle - (len - 1) / 2;
+        end = middle + 1 + (len - 1) / 2;
+      } else {
+        start = middle - (len - 2) / 2;
+        end = middle + 2 + (len - 2) / 2;
       }
     }
   }
 
-  return res;
+  return s.slice(start, end);
 };
 
-let test = "babad";
-console.time("test " + test);
-let res = longestPalindrome(test);
-console.timeEnd("test " + test);
-console.log(`[res]${test}:`, res);
-console.log(["bab", "aba"].includes(res));
+/**
+ * @description 从中点向两边开始扩散
+ *
+ * @param {string} s 字符串
+ * @param {number} middlePointer0 中点1
+ * @param {number} [middlePointer1=] 中点2
+ * @return {number} 回文字符串的长度
+ */
+function appendAroundMiddlePointer(s, middlePointer0, middlePointer1) {
+  const size = s.length;
+  let leftIndex = middlePointer0;
+  let rightIndex = middlePointer1;
+  while (
+    leftIndex >= 0 &&
+    rightIndex <= size &&
+    s.charAt(leftIndex) === s.charAt(rightIndex)
+  ) {
+    leftIndex -= 1;
+    rightIndex += 1;
+  }
 
-test = "cbbd";
-console.time("test " + test);
-res = longestPalindrome(test);
-console.timeEnd("test " + test);
-console.log(`[res]${test}:`, res);
-console.log(["bb"].includes(res));
-
-test = "avcdd%%ddedcdedd%%ddfsersssdfw3df";
-console.time("test " + test);
-res = longestPalindrome(test);
-console.timeEnd("test " + test);
-console.log(`[res]${test}:`, res);
-console.log(["dd%%ddedcdedd%%dd"].includes(res));
+  return rightIndex - leftIndex - 1;
+}
