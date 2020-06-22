@@ -17,5 +17,5 @@ var maxSubArray = function(nums) {
       maxSum = sum;
     }
   }
-  return max;
+  return maxSum;
 };
